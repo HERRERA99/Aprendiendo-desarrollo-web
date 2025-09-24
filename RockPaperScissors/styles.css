@@ -1,0 +1,158 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: linear-gradient(180deg, #0a3d62, #3c6382);
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#headerJuego {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ocultar por defecto */
+#headerJuego.hidden {
+    display: none;
+}
+
+.tituloInicio {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #dff9fb;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #dff9fb;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #82ccdd;
+}
+
+.pantalla {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.visible {
+    display: flex;
+}
+
+.inicio-contenido {
+    margin-top: 3rem;
+}
+
+.btn {
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    background: #38ada9;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+
+    width: auto;
+    /* evita que ocupe todo el ancho */
+    max-width: 200px;
+    /* opcional: tamaño máximo */
+    align-self: center;
+    /* lo centra en contenedor flex */
+}
+
+.btn:hover {
+    background: #079992;
+}
+
+/* Opciones de elección */
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+button.opcion {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 6px solid #82ccdd;
+    background: #60a3bc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+button.opcion img {
+    width: 80px;
+    pointer-events: none;
+    filter: brightness(0) invert(1);
+    /* iconos blancos */
+}
+
+button.opcion:hover {
+    transform: scale(1.1);
+    background: #3c6382;
+}
+
+button.seleccionado {
+    border-color: #38ada9;
+    background: #0a3d62;
+    box-shadow: 0 0 20px #38ada9;
+}
+
+/* Resultado */
+.versus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.circulo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 6px solid #82ccdd;
+    background: #60a3bc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circulo img {
+    width: 80px;
+    filter: brightness(0) invert(1);
+}
+
+.vs {
+    font-size: 2rem;
+    color: #dff9fb;
+}
+
+/* Mensaje y botón al final */
+.resultadoFinal {
+    margin-top: 2rem;
+    display: none;
+}
+
+.resultadoFinal h2 {
+    margin-bottom: 1rem;
+    color: #f6e58d;
+}

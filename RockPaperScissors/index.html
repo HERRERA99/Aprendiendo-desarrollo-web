@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock-Paper-Scissors</title>
+</head>
+
+<body>
+    <!-- Barra superior -->
+    <header id="headerJuego">
+        <h1>Rock-Paper-Scissors</h1>
+        <p>Streak: <span id="contadorVictorias">0</span></p>
+    </header>
+
+    <!-- Pantalla inicial -->
+    <div id="pantallaInicio" class="pantalla visible">
+        <div class="inicio-contenido">
+            <h2>Ready to play?</h2>
+            <button class="btn" onclick="irAEleccion()">Play</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de elección -->
+    <div id="pantallaEleccion" class="pantalla">
+        <h2>Choose one</h2>
+        <div class="opciones">
+            <button class="opcion" onclick="seleccionar(this, 'piedra')">
+                <img src="./resources/icon-rock.svg" alt="Rock">
+            </button>
+            <button class="opcion" onclick="seleccionar(this, 'papel')">
+                <img src="./resources/icon-paper.svg" alt="Paper">
+            </button>
+            <button class="opcion" onclick="seleccionar(this, 'tijera')">
+                <img src="./resources/icon-scissors.svg" alt="Scissors">
+            </button>
+        </div>
+        <button class="btn" onclick="jugar()">Confirm</button>
+    </div>
+
+    <!-- Pantalla de resultado -->
+    <div id="pantallaResultado" class="pantalla">
+        <div class="versus">
+            <div class="jugador">
+                <h3>You</h3>
+                <div class="circulo">
+                    <img id="imgJugador" src="" alt="Tu elección">
+                </div>
+            </div>
+            <h2 class="vs">VS</h2>
+            <div class="jugador">
+                <h3>Bot</h3>
+                <div class="circulo">
+                    <img id="imgBot" src="" alt="Bot elección">
+                </div>
+            </div>
+        </div>
+        <div id="resultadoFinal" class="resultadoFinal">
+            <h2 id="mensajeResultado"></h2>
+            <button id="btnReiniciar" class="btn" onclick="reiniciar()">Play again</button>
+        </div>
+    </div>
+
+    <script src="Controller.js"></script>
+</body>
+
+</html>
